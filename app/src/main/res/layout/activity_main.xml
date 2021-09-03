@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/addA"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="add a"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/removeA"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+
+        android:text="remove a"
+        app:layout_constraintEnd_toStartOf="@id/replaceAWithB"
+        app:layout_constraintStart_toEndOf="@id/addA"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/replaceAWithB"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="5dp"
+        android:text="Replace a with b"
+        app:layout_constraintEnd_toStartOf="@id/replaceAWithBwithBackStack"
+        app:layout_constraintStart_toEndOf="@id/removeA"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/replaceAWithBwithBackStack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="REplace a with b using backstack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/replaceAWithB"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/addB"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="add b"
+        app:layout_constraintEnd_toStartOf="@id/removeB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/replaceAWithBwithBackStack" />
+
+    <Button
+        android:id="@+id/removeB"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="remove b"
+        app:layout_constraintEnd_toStartOf="@id/replaceBWithA"
+        app:layout_constraintStart_toEndOf="@id/addB"
+        app:layout_constraintTop_toBottomOf="@id/replaceAWithBwithBackStack" />
+
+    <Button
+        android:id="@+id/replaceBWithA"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="replace b with a"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/removeB"
+        app:layout_constraintTop_toBottomOf="@id/replaceAWithBwithBackStack" />
+
+    <FrameLayout
+        android:id="@+id/fContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/replaceBWithA" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
